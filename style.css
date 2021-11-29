@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura&family=Poppins&display=swap");
+
+:root {
+  --ff: "Poppins", sans-serif;
+  --R: hsl(0, 78%, 62%);
+  --C: hsl(180, 62%, 55%);
+  --O: hsl(34, 97%, 64%);
+  --B: hsl(212, 86%, 64%);
+  --DarkBlue: hsl(234, 12%, 34%);
+  --GrayBlue: hsl(229, 6%, 66%);
+  --LightGray: hsl(0, 0%, 98%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--ff);
+  font-size: 15px;
+  background: url("./images/hole-gfc8f57c8c_1280.png") center / cover no-repeat;
+}
+.main-container {
+  width: 1500px;
+  margin: 4rem auto;
+  padding: 6rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  color: var(--DarkBlue);
+  background-color: var(--LightGray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+h1 {
+  font-size: 2.4em;
+  font-weight: 600;
+}
+h2 {
+  font-size: 2.1rem;
+  color: var(--GrayBlue);
+  font-weight: 200;
+}
+.title p {
+  color: var(--GrayBlue);
+  width: 500px;
+  margin: 1rem 0 1.5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.supervisor,
+.calculator {
+  grid-row: span 2;
+  display: grid;
+  align-items: center;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  padding: 1rem 2rem;
+  width: 22rem;
+  height: 16rem;
+  border-radius: 0.3rem;
+  background-color: var(--LightGray);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 20px 24px;
+}
+.card1 {
+  border-top: 0.3rem solid var(--C);
+}
+.card2 {
+  border-top: 0.3rem solid var(--R);
+}
+.card3 {
+  border-top: 0.3rem solid var(--B);
+}
+.card4 {
+  border-top: 0.3rem solid var(--O);
+}
+
+.img {
+  justify-self: end;
+}
+.cards h3 {
+  margin: 2rem 0 -1rem;
+}
+.cards p {
+  color: var(--GrayBlue);
+}
+
+footer {
+    background-color: var(--LightGray);
+    padding: 0.8rem;
+}
+
+@media (max-width: 375px){
+    .main-container {
+        width: 100%;
+        margin: 0;
+        padding: 1rem;
+        color: var(--DarkBlue);
+        background-color: var(--LightGray);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 0rem;
+      }
+      .grid-container {
+          display: block;
+      }
+      .title {
+          margin: 3rem auto 2rem;
+      }
+      .title h2, .title h1, .title p {
+          margin: 0 auto;
+          width: 96%;
+          margin-bottom: 0.2rem;
+      } 
+      .title h1 {
+          font-size: 1.5rem;
+          margin-bottom: 0.6rem;
+      }
+      .title h2 {
+          font-size: 1.4rem;
+      }
+      .cards {
+       width: 96%;
+       margin: 1rem auto;
+      }
+}
